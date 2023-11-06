@@ -1,0 +1,93 @@
+.header {
+  background-color: #bbbbbb;
+}
+
+.btn-error {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+  background-image: url(urlImagen.png);
+  width: 50px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: rgba(255, 0, 0, 0.7058823529);
+}
+a:visited {
+  color: rgba(0, 140, 255, 0.774);
+}
+a:active {
+  color: rgba(118, 194, 18, 0.568627451);
+}
+
+header {
+  background-color: black;
+  color: white;
+}
+
+td:nth-child(1) {
+  background-color: #0f0;
+}
+
+td:nth-child(2) {
+  background-color: #00f;
+}
+
+td:nth-child(3) {
+  background-color: orange;
+}
+
+td:nth-child(4) {
+  background-color: #ccc;
+}
+
+td:nth-child(1) {
+  color: red;
+}
+
+td:nth-child(2) {
+  color: red;
+}
+
+td:nth-child(3) {
+  color: red;
+}
+
+td:nth-child(4) {
+  color: red;
+}
+
+td:nth-child(1) {
+  background-color: #0f0;
+}
+
+td:nth-child(2) {
+  background-color: #00f;
+}
+
+td:nth-child(3) {
+  background-color: orange;
+}
+
+td:nth-child(4) {
+  background-color: #ccc;
+}
+
+.container {
+  width: 10000%;
+}
+
+body {
+  background-color: rgb(164, 192, 122);
+}
+
+a {
+  font-style: italic;
+}
+
+/*# sourceMappingURL=resulPrueba.css.map */

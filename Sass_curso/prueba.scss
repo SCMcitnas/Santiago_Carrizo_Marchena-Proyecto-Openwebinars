@@ -1,0 +1,125 @@
+$grey: #bbbbbb;
+$header-background : $grey;
+
+.header{
+    background-color: $header-background;
+}
+
+//Listas
+$sizesL: (40px,80px,160px);
+
+//Mapas
+$sizesM: (
+    "s":10px,
+    "m":20px,
+    "l":30px,
+);
+
+//Interpolaciones
+$button-type: "error";
+$button-color: #0000;
+
+.btn-#{$button-type}{
+    background-color: $button-color;
+}
+
+$fondo: "urlImagen.png";
+
+.container{
+    background-image: url(#{$fondo});
+    width: 50px;
+}
+
+//Anidamiento
+a{
+    color:black;
+    text-decoration: none;
+    &:hover{
+        color:#ff0000b4;
+    }
+    &:visited{
+        color:rgba(0, 140, 255, 0.774);
+    }
+    &:active{
+        color:#76c21291;
+    }
+
+}
+
+//if
+
+$claro: false;
+$oscuro: true;
+
+header{
+    @if $claro == true{
+        background-color: white;
+        color: black;
+    }@else if $oscuro{
+        background-color: black;
+        color: white;
+    }@else{
+        background-color: gray;
+        color: black;
+    }
+}
+
+//while
+
+$num: 1;
+$color-list: #0f0, #00f, orange, #ccc;
+
+@while $num < 5 {
+  td:nth-child(#{$num}) {
+    background-color: nth($color-list, $num);
+  }
+  $num: $num + 1;
+}
+
+//for
+
+@for $i from 1  through 4{
+    td:nth-child(#{$i}) {
+        color:red;
+    }
+}
+
+//each
+$num: 1;
+@each $color in $color-list{
+    td:nth-child(#{$num}) {
+        background-color: $color;
+    }
+      $num: $num + 1;
+}
+
+//funcion
+
+@function anchuraContainer($total){
+    @return percentage($total);
+}
+
+.container{
+    width: anchuraContainer(100);
+}
+
+//import
+@import "import";
+
+//mixin e include
+
+@mixin linkChange{
+    a{
+        font-style: italic;
+    }
+}
+
+@include linkChange;
+
+@function colum-color($col-number) {
+    @if ($col-number%2 == 0) {
+      @return $color-col-pares;
+    } @else {
+      @return $color-col-impares;
+    }
+  }
