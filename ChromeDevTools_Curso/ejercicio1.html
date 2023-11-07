@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <meta charset="utf-8"> 
+    <title>Examen 1ª Evaluación: Santiago Carrizo Marchena</title> 
+    <link rel="stylesheet" href="ejercicio1.css">
+    <meta name="keywords" content="opinion,mejora,examen,prueba,pagina">
+    <meta name="description" content="Este es el primer ejercicio de un examen de marcas">
+    <meta http-equiv="refresh" content="240">
+   </head>
+
+   <body>
+       <form method="post" action="mailto:tucorreo@email.com" enctype="text/plain">
+           
+             <table>
+                <tr><th colspan="3"><h1>Por favor, dediquenos unos minutos para mejorar</h1></th></tr>
+                  <div id=todo><tr>
+                    <tr><div id=primero>
+                        <td><div id=derecha>
+                            <h2>La atencion recibida ha sido:</h2>
+                            Muy buena<input name="atencion" type=radio><br>
+                            Buena<input name="atencion" type=radio><br>
+                            Mala<input name="atencion" type=radio><br>
+                            Muy mala<input name="atencion" type=radio><br>
+                        </div></td>
+
+                        <td><div id=centro>
+                            <h3>¿Volveria a confiar en nosotros?:</h3>
+                            Si<input name="confianza" type=radio><br>
+                            No<input name="confianza" type=radio><br>
+                        </div></td>
+
+                        <td><div id=izquierda>
+                            <h4>¿Podria indicarnos la razon?</h4>
+                            <textarea rows="4" cols="60" placeholder="Por favor escriba la razón. Este campo es obligatorio" required></textarea>
+                        </div></td>
+
+
+
+                    </div></tr>
+
+                    <div id=segundo><tr>
+                        <div id=uno><td colspan="2">
+                            <h5>Si desea que contactemos con usted rellene los datos a continuacion:</h5><br>
+                        Tratamiento: <select name=sexo>
+                                            <option>Señor
+                                            <option>Señora
+                                        </select><br>
+                            Nombre: <input type="text" size="20" maxlength="40" name="nombre"/><br>
+                            Email: <input type="email" size="20" maxlength="40" name="email"/><br>
+                            Telefono: <input type="text" maxlength="9" name="telefono"/><br>
+                        <input type="checkbox" id="publi" value="si">
+                            <label for="publi"> Acepto el tratamiento de mis datos personales</label><br>
+                        </td></div><br>
+
+                        <div id=dos><td colspan="1">
+                            <img src="imagen.png"><br>
+                        </td></div><br>
+                    </tr></div>
+                    <td colspan="3"><input id="Boton" type="button" value="Enviar" name="boton"/></td> 
+                 </tr></div>
+            
+             </table>
+
+   </body>

@@ -1,0 +1,48 @@
+h1{
+    text-align: center;
+    
+}
+#primero{
+    width: auto;
+    
+
+}
+#segundo{
+    width: auto;
+    
+}
+table{
+    width: 99%; height: auto;
+    background-color: burlywood;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+    margin-bottom: 30px;
+    border: black 1px solid;
+    
+}
+#Boton{
+    width: 20%; height: 20px;
+    margin-left: 35%;
+
+}
+th,td{
+    margin-bottom: 30px;
+    border: black 1px solid;
+}
+#derecha{
+    width: 33%;
+}
+#centro{
+    width: 33%;
+}
+#izquierda{
+    width: 33%;
+}
+
+#uno{
+    width: 50px;
+}
+#dos{
+    width: 50px;
+}

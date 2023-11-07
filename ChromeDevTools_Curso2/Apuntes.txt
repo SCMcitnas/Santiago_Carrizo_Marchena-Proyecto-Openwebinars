@@ -1,0 +1,17 @@
+//Optimizar resultados de la grabacion en Network
+//Funciones que esperan a que terminen las anteriores
+
+//Cookies guardan datos chave-valor
+
+localStorage.setItem("nombre","Ejemplo");
+alert(localStorage.getItem("nombre"));
+
+//WebSQL obsoleta
+//No confundir Cache con Cache HTTP
+
+//PWA caracteristicas avanzadas
+
+//Rendimientro general : (Dev Tools Options>More Tools>Performance Monitor)
+//Rendimiento Performance mas detallado
+//Rendimientro en frames : (Dev Tools Options>More Tools>Rendering)
+//Rendimiento LightHouse para seleccionar las caracteristicas especificas que quieres medir ademas de aconsejar como mejorarlo
