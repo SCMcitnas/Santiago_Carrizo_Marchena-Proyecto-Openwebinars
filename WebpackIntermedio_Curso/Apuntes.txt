@@ -1,0 +1,37 @@
+La configuracion tiende a duplicarse, se intentan eliminar utilizando funciones.
+En la carpeta build/buildtools contiene todos los documentos de webpack
+Para evitar duplicacion de configuracion podemos hacer una composicion de objetos (herencias,propiedades),
+o mediante funciones.
+Para concatenar y no sobreescribir diferentes propiedades existe una herramienta en webpack llamada webpack-merge
+Para instalarla: npm i -D webpack-merge
+
+A la hora de consumir paquetes puede no estar empaquetado correctamente por ello hay que hacer algun metodo para llegar a las dependencias y cargarlas
+y para ello podemos crear alias para una ruta en concreto, manejar extensiones ya que por defecto javascript o json las induce sin problemas pero puedes definir otras, y configurar los modulos
+
+Webpack nos deja enviar hashes para invalidar las caches y analizar las dependencias para ver que librerias nos perjudican
+
+La cache funciona despues de que el usuario haya entrado mas de una vez a la pagina, se encargara el navegador de descargarse los caches necesarios
+Es importante hacer buen uso de las caches para que la pagina cargue mas rapido
+
+Un hash es importante para usar la cache, es la forma principal de decirle al navegador que vuelva a descargar un fichero ya que no sirve el cache que tiene
+Si cambiamos el hash o se actualiza, este cambiara y su nombre tambien por ello la cache se invalida y se actualiza el navegador
+Para hacer esto se usan placeholders que es una forma dinamica de crear nombres de ficheros
+
+El bundle splitting divide un fichero en diferentes partes (chunks) para que el usuario no tenga que descargarselo entero por un cambio minimo ya que estaria invalidado
+vendors=dependencias
+
+El code splitting es una tecnica por la cual el usuario se va descargando codigo a medida que lo necesita
+Requiere meterlo en un metodo try/catch ya que puede fallar
+Al ejecutarlo crea splits points para dividir el codigo y que se genere a medida que el usuario realiza acciones
+
+Webpack tiene varias herramientas de analisis que nos permite analizar los bundles y como las dependencias tienen su impacto
+
+El Dynamic Link Library nos va a permitir seleccionar las dependencias comunes que sean importadas por muchos modulos para empaquetarlas en dll ya que no van a cambiar
+Para esto se utilizan dos plugins DllPlugin y DLLReferencePlugin
+
+Los web workers nos permiten empaquetar proyectos hechos con este plugin
+Para instalarlo: npm i -D worker-loader
+
+Para instalar plugin internacionalizacion: npm i -D i18n-webpack-plugin
+
+Para extender las opciones que nos da Webpack tendremos que implementar nuestros propios loaders y plugins

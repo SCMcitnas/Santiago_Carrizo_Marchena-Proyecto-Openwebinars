@@ -1,0 +1,30 @@
+//Instalacion de paquetes webpack (de forma que no se instale automaticamente al cargarlo en un repositorio)
+npm install webpack webpack-cli --save-dev
+
+//Utilidad de webpack
+node node_modules\webpack\bin\webpack.js (--mode development (Modo de ejecucion))
+	-Si da error se debe crear el directorio src
+
+//Cambiar entre configuraciones
+webpack --config webpack.(modo).config
+
+//Pasar una variable
+webpack --env.var_name=valor
+
+//Instalar loader css
+npm i -D css-loader style-loader
+
+//Instalar loader sass
+npm i -D sass-loader sass
+
+//Instalar loader less
+npm i -D less-loader less
+
+//Instalar loader imagenes
+npm i -D file-loader url-loader
+
+//Instalar plugins
+npm i -D html-webpack-plugin clean-webpack-plugin
+
+//Instalar DevServer
+webpack-dev-server --mode development (--hot(remplazar en caliente))
