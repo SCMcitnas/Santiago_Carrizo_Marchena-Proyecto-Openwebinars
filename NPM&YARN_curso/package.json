@@ -1,0 +1,31 @@
+{
+  "name": "primer-package",
+  "description": "descripcion",
+  "author": "Me",
+  "version": "1.0.1",
+  "private": false,
+  "keywords": [
+    "example",
+    "package",
+    "json"
+  ],
+  "files": [
+    "lib/",
+    "bin/"
+  ],
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "lint": "eslint .",
+    "test": "jest",
+    "test:converage": "jest --converage",
+    "test:watch": "jest --watchAll"
+  },
+  "bin": {
+    "first-package": "webpack-cli"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "freeuce": "^2.1.0"
+  },
+  "license": "MIT"
+}

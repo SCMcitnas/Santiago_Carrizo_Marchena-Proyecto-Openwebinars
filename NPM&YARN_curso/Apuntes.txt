@@ -1,0 +1,72 @@
+Una dependencia es un modulo externo que realiza cierta funcion, tambien puede ser llamada libreria.
+Pueden depender unas de otras. Para integrar estas dependencias se utilizan gestores que tambien ayudan a su instalacion y borrado, y se apoyan en ficheros de comunicacion.
+Estos repositorios son lugares donde se aloja la dependencia con un nombre y version determinado, ademas puede ser publico o privado.
+Estos gestores ademas de añadir diferentes funciones de las dependencias nos permiten tenerlas actualizadas.
+
+Existen modulos y paquetes que añaden las funciones al codigo.
+El modulo es todo aquel que pueda ser cargado con "require" de Nodejs
+El paquete por otro lado contiene varios modulos y un archivo package.json
+
+Existe un repositorio en el que se encuentran los paquetes que solicitamos para descargar las dependencias, y ese repositorio se denomina registro.
+NPM y Yarn acuden al registro NPM que no es igual al NPM. Este contiene publicos gratuitos y privados de pago.
+Para buscar un registro vamos a la pagina NPM y ahi nos aparecera toda la informacion de este.
+
+NPM (Node Package Manager) es uin gestos de dependencias de javascript que se instala junto a Nodejs. Tiene 3 componentes, su pagina web donde se encuentran los registros,
+la interfaz de comandos con la que interactuamos con el gestor de dependencias, y el registro donde esta la base de datos.
+La cantidad de paquetes en NPM es la mayor en comparacion con el resto y esto puede ser un problema ya que se crean muchos paquetes parecidos, es por ello
+que debemos valorar bien cuando debemos crear un paquete, modificar uno existente o buscarlo.
+Podemos utilizar paginas como "npm trends" para comparar un paquete con otro
+
+Yarn es muy parecido a NPM pero se enfocan mas en la velocidad y la seguridad.
+
+Dentro del package.json tenemos varios tipos de metadata:
+-Campos de descripcion: se dedican a describir que hace un paquete
+-Scripts: definen tareas o scripts que luego ejecutaremos desde un gestor de dependencias, se pueden agrupar estos scripts usando namespace:script-name
+-Entry points: fichero que agrupa otros ficheros
+-Dependencias: tipos de dependencias
+-Links
+-Licencia: tipos de licencia
+-Files: 
+
+El versionado asigna un nombre o numero al estado de la dependencia, estos van cambiando segun las modificaciones en su desarrollo
+
+Para instalar dependencias mediante npm usaremos este comando:
+npm install [<@scope>/]<name>[@<version|tag|version range>]
+El scope puede ser una organizacion a la que se lo solicitamos o nuestro usuario para que no colisionen los nombres
+Podemos especificar la version y si no se añade coje la ultima por defecto
+La tag latest solicita la ultima version
+Es muy peligroso añadir, actualizar y en general darle a npm permisos globales ya que pueden surgir errores que puedan romper el codigo al colisionar las dependencias
+
+Si queremos publicar nuestros paquetes lo primero es identificarse la primera vez y suele hacerse de forma local al paquete en el que nos situamos.
+Tendremos que aumentar la version si no es la primera vez que lo subimos, si no devolvera error.
+Para identificarnos debemos hacerlo con el siguiente comando:
+npm adduser [--registry=url] [--scope=@orgname] [--always-auth]
+La url es opcional solo si el registro no es npm
+Si el paquete va dentro de un scope tendremos que especificarlo si no pensara que subimos una organizacion y tendremos que pagar
+Podemos solicitar que pida la autenticacion siempre
+
+Los lockfiles pretenden fijar versiones de dependencias/arboles, como un mecanismo de mantencion el estado del node_modules.
+
+Para instalar Yarn necesitamos buscarlo de forma externa a Nodejs, para ello vamos a la pagina oficial de Yarn en la cual directamente nos detecta nuestro sistema operativo
+y nos recomienda la mejor forma de instalacion. En mi caso como utilizo windows y visual studio code me recomienda la siguiente:
+npm install --global yarn (comprobar: yarn --version)
+
+Para crear un package:
+ -yarn init
+	-rellenar los parametros
+Comparte fichero package.json con npm
+
+Podemos crearlo usando un starter kit:
+	-cd directorio react
+	-yarn create react-app [nombre]
+
+En yarn podemos hacer uso de "yarn upgradre-interactive" para actualizar las dependencias de manera mas comoda
+con preguntas de la propia terminal, esto en npm no existe pero tenemos npm-check
+
+Para publicar un yarn primero debemos entrar con un usuario donde nos pedira el username o el email
+Luego tendremos que asignar una version si no es la primera vez
+Publicaremos el paquete yarn: yarn publish --access public (para que el acceso sea publico)
+A continuacion podemos aumentar la version con yarn version --patch (incremento automatico)
+
+Los lockfiles en yarn se ejecutan de mejor manera que en npm por lo que son mas fiables
+Los links son iguales en npm y en yarn
