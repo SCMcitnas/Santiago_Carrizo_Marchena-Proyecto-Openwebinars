@@ -1,4 +1,4 @@
-# Inicio
+# Comienzo de la carrera
 ## 13/10/2023 
 Comienzo la carrera de [OpenWebinars](https://openwebinars.net) repasando un poco de html, css y javascript de primero del ciclo ya que es recomendable para poder progresar según las especificaciones, ademas de una introduccion de la pagina en la que te explican diferentes características de este campo laboral. Tambien nos comunican diferentes cursos y tipos de proyectos que vamos a elaborar en esta carrera, son los siguientes:
 
